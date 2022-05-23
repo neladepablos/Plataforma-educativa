@@ -13,7 +13,7 @@ import {
 const API_URL = process.env.REACT_APP_API_URL;
 
 // action creators: Funciones que harán la llamada a un dispatch mandándole objetos y estos
-// 1 son los que modificarán la store.
+// son los que modificarán la store.
 export const getAllPosts = () => dispatch => {
   // Haciendo la peticion al sevidor
   Axios.get(`${API_URL}/posts`)
@@ -85,7 +85,7 @@ export const getPost = (id) => dispatch => {
 
 export const getSpeciality = (id) => dispatch => {
   // Haciendo la peticion al sevidor
-  Axios.get(`${API_URL}/especialidades/${id}`)
+  Axios.get(`${API_URL}/especialidad/${id}`)
   .then(
     resp => {
       return dispatch({
@@ -98,7 +98,7 @@ export const getSpeciality = (id) => dispatch => {
 
 export const getCourse = (id) => dispatch => {
   // Haciendo la peticion al sevidor
-  Axios.get(`${API_URL}/cursos/${id}`)
+  Axios.get(`${API_URL}/curso/${id}`)
   .then(
     resp => {
       return dispatch({

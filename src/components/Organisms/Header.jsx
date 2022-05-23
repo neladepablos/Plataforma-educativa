@@ -1,16 +1,18 @@
 import React, { createRef } from 'react';
 // import { Link } from 'react-router-dom';
-import EDlogo from '../../images/escomath2.png';
+import EDlogo from '../../images/logo-escomath.png';
+import PrivateMenu from '../Molecules/PrivateMenu';
+import PublicMenu from '../Molecules/PublicMenu';
+
 
 // Creando una referencia
 const menu = createRef();
 const toggleMenu = () => menu.current.classList.toggle('show');
 
-const removeToken = () => {
-  localStorage.removeItem('token')
-  window.location = "/login"
-}
-
+// const removeToken = () => {
+//   localStorage.removeItem('token')
+//   window.location = "/login"
+// }
 
 const Header = () => {
   return (
@@ -28,16 +30,15 @@ const Header = () => {
         </div>
 
         <div className='s-cols-1 lg-cols-3 s-cross-center s-main-end'>
-          <nav className='main-menu' ref={menu}>
-            <ul>
-              <li><a href="/">Inicio</a></li>
-              <li><a href="/especialidades">Especialidades</a></li>
-              <li><a href="/cursos">Cursos</a></li>
-              <li><a href="/profesores">Profesores</a></li>
-              <li><span style={{cursor: "pointer"}} onClick={() => removeToken()}>Cerrar Sesión</span></li>
-            </ul>
+          <nav className='main-menu' ref={menu}> 
+          {
+            localStorage.getItem('token') 
+            ? <PrivateMenu />
+            : <PublicMenu />
+          }            
+            
           </nav>
-
+          
           {/* Menu hamburguesa */}
           <div 
             className='main-menu-toggle to-l'

@@ -30,8 +30,7 @@ function App() {
 
           <Public path="/login" exact component={Login} />
           <Public path="/registro" exact component={Register} />
-          {/* <Route component={Page404} */}
-          
+          {/* <Route component={Page404} */} 
         
         </Switch>
       </Router>

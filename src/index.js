@@ -4,12 +4,12 @@ import App from './components/App';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 import { getAllSpecialities } from './redux/actionCreators';
-import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import "./styles/styles.scss";
 
 
-store.dispatch(getAllSpecialities());
+
+// store.dispatch(getAllSpecialities());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
