@@ -1,4 +1,4 @@
-import { BrowserRouter as Router,  Switch,  Route } from "react-router-dom";
+import { BrowserRouter as Router,  Switch } from "react-router-dom";
 import Protected from "./Routes/Protected";
 import Public from "./Routes/Public";
 import Home  from "./Pages/Home";
@@ -10,7 +10,6 @@ import Teachers from "./Pages/Teachers";
 import Fragment from "./Pages/Fragment";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
-import Page404 from "./Pages/Page404";
 import Header from "./Organisms/Header";
 
 
