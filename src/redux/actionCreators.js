@@ -109,9 +109,11 @@ export const getCourse = (id) => dispatch => {
   )
 }
 
+
+
 export const getFragment = (id) => dispatch => {
   // Haciendo la peticion al sevidor
-  Axios.get(`${API_URL}/clases/${id}`)
+  Axios.get(`${API_URL}/clase/${id}`)
   .then(
     resp => {
       return dispatch({
